@@ -55,7 +55,8 @@ def generate_pdf(customer_data, loan_summary):
     pdf.cell(200, 10, "Loan Summary", ln=True)
     pdf.set_font("Arial", '', 12)
     for label, value in loan_summary.items():
-        pdf.cell(200, 8, f"{label}: {value}", ln=True)
+    value_str = str(value).replace('₹', 'Rs. ')
+    pdf.cell(200, 8, f"{label}: {value_str}", ln=True)
 
     filename = f"Loan_Receipt_{customer_data['Name'].replace(' ', '_')}.pdf"
     pdf.output(filename)
