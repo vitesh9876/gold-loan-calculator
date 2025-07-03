@@ -32,8 +32,8 @@ def calculate_gold_loan(principal, start_date, end_date):
 
 # --- Streamlit UI ---
 
-st.set_page_config(page_title="Gold Loan Calculator", layout="centered")
-st.title("🏦 Gold Loan Finance Calculator")
+st.set_page_config(page_title="Praveen Kumar Finance Calculator", layout="centered")
+st.title("🏦 Praveen Kumar Finance Calculator")
 
 with st.form("gold_loan_form"):
     amount = st.number_input("Enter Loan Amount (₹):", min_value=100.0, step=100.0)
